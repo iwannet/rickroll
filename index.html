@@ -22,6 +22,7 @@
       var video = document.querySelector('video');
       video.addEventListener('loadedmetadata', function() {
         video.play();
+        video.muted = false;
         video.requestFullscreen();
       });
     </script>
