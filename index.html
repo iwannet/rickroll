@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Loading...</title>
-      <meta http-equiv="refresh" content="0; url=https://iwannet.cc/rickroll/rickroll.mp4">
-   </head>
-   <body>
-      <p>Loading...</p>
-      <video autoplay loop width="100%" preload="auto">
-         <source src="https://iwannet.cc/rickroll/rickroll.mp4" type="video/mp4">
-         Sorry, your browser doesn't support embedded videos.
-      </video>
-   </body>
+  <head>
+    <title>Lol get rickrolled</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body, video {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay controls muted playsinline>
+      <source src="rickroll.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <script>
+      var video = document.querySelector('video');
+      video.addEventListener('loadedmetadata', function() {
+        video.play();
+        video.requestFullscreen();
+      });
+    </script>
+  </body>
 </html>
